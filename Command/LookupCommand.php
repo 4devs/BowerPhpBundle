@@ -34,7 +34,6 @@ EOT
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
         $name = $input->getArgument('package');
 
         $packageNameVersion = PackageNameVersionExtractor::fromString($name);

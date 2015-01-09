@@ -9,6 +9,7 @@ Installation and usage is a quick:
 2. Enable the bundle
 3. Use the bundle
 4. Configure the bundle
+5. Add your script/style in assetic if needed
 
 
 ### Step 1: Download Locale bundle using composer
@@ -64,4 +65,18 @@ f_devs_bower_php:
     install_dir:          '%kernel.root_dir%/../web/components'
     bower_path:           '%kernel.root_dir%/config/bower.json'
     github_token:         null
+```
+
+### Step 5: Add your script/style in assetic if needed
+
+``` yaml
+# Assetic Configuration
+assetic:
+    assets:
+    #....
+        jquery_js:
+            inputs:
+                - 'components/jquery/dist/jquery.js'
+            output: 'js/jquery.js'
+
 ```

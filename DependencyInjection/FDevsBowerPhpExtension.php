@@ -31,7 +31,7 @@ class FDevsBowerPhpExtension extends Extension
         $loader->load('services.xml');
 
         if ($config['github_token']) {
-            $container->get('f_devs_bower_php.github_client')->authenticate($config['github_token'], null, Client::AUTH_HTTP_TOKEN);
+            $container->getDefinition('f_devs_bower_php.github_client')->addMethodCall('authenticate', [$config['github_token'], null, Client::AUTH_HTTP_TOKEN]);
         }
     }
 }

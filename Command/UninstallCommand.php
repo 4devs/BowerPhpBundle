@@ -5,7 +5,6 @@ namespace FDevs\BowerPhpBundle\Command;
 use Bowerphp\Installer\Installer;
 use Bowerphp\Package\Package;
 use Bowerphp\Util\PackageNameVersionExtractor;
-use Bowerphp\Util\ZipArchive;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Output\OutputInterface;

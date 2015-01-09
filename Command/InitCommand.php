@@ -2,7 +2,6 @@
 
 namespace FDevs\BowerPhpBundle\Command;
 
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -46,7 +45,6 @@ EOT
 
             $name = $name ?: $dialog->ask($output, 'Please specify a name for project: ', get_current_user());
             $author = $author ?: $dialog->ask($output, 'Please specify an author: ', sprintf('%s <%s>', $this->getGitInfo('user.name'), $this->getGitInfo('user.email')));
-
         }
         // @codeCoverageIgnoreEnd
         $bowerphp = $this->getBowerphp($output);

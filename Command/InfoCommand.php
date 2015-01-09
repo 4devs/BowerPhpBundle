@@ -39,7 +39,6 @@ EOT
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-
         $packageName = $input->getArgument('package');
         $property = $input->getArgument('property');
 
