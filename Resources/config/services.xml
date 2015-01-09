@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="f_devs_bower_php.config.class">FDevs\BowerPhpBundle\Config\Config</parameter>
+        <parameter key="f_devs_bower_php.filesystem.class">Bowerphp\Util\Filesystem</parameter>
+        <parameter key="f_devs_bower_php.installer.class">Bowerphp\Installer\Installer</parameter>
+        <parameter key="f_devs_bower_php.zip_archive.class">Bowerphp\Util\ZipArchive</parameter>
+        <parameter key="f_devs_bower_php.github_client.class">Github\Client</parameter>
+    </parameters>
+
+    <services>
+        <service id="f_devs_bower_php.config" class="%f_devs_bower_php.config.class%">
+            <argument type="service" id="f_devs_bower_php.filesystem"/>
+            <argument>%f_devs_bower_php.cache_dir%</argument>
+            <argument>%f_devs_bower_php.install_dir%</argument>
+            <argument>%f_devs_bower_php.bower_path%</argument>
+        </service>
+        <service id="f_devs_bower_php.installer" class="%f_devs_bower_php.installer.class%">
+            <argument type="service" id="f_devs_bower_php.filesystem"/>
+            <argument type="service" id="f_devs_bower_php.zip_archive"/>
+            <argument type="service" id="f_devs_bower_php.config"/>
+        </service>
+        <service id="f_devs_bower_php.zip_archive" class="%f_devs_bower_php.zip_archive.class%"/>
+        <service id="f_devs_bower_php.filesystem" class="%f_devs_bower_php.filesystem.class%" parent="filesystem"/>
+        <service id="f_devs_bower_php.github_client" class="%f_devs_bower_php.github_client.class%"/>
+    </services>
+
+</container>

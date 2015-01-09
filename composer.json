@@ -1,0 +1,31 @@
+{
+    "name": "fdevs/bower-php-bundle",
+    "license": "MIT",
+    "type": "symfony-bundle",
+    "description": "Bundle for working with Bower",
+    "homepage": "https://github.com/4devs/BowerPhpBundle",
+    "keywords": [
+        "bower",
+        "bowerphp"
+    ],
+    "authors": [
+        {
+            "name": "Samusev Andrey",
+            "email": "andrey_simfi@list.ru",
+            "homepage": "http://andrey.4devs.io/"
+        },
+        {
+            "name": "4devs Community",
+            "homepage": "https://github.com/4devs/BowerPhpBundle/contributors"
+        }
+    ],
+    "require-dev": {},
+    "require": {
+        "beelab/bowerphp": "1.0.*@dev"
+    },
+    "suggest": {
+    },
+    "autoload": {
+        "psr-4": {"FDevs\\BowerPhpBundle\\": ""}
+    }
+}
