@@ -93,6 +93,6 @@ namespace :bower do
     end
 end
 
-after 'deploy:update', 'bower:install'
+before 'symfony:assetic:dump', 'bower:install'
 
 ```
