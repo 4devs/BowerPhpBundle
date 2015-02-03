@@ -10,6 +10,7 @@ Installation and usage is a quick:
 3. Use the bundle
 4. Configure the bundle
 5. Add your script/style in assetic if needed
+6. Add command in capifony if needed
 
 
 ### Step 1: Download Locale bundle using composer
@@ -78,5 +79,20 @@ assetic:
             inputs:
                 - 'components/jquery/dist/jquery.js'
             output: 'js/jquery.js'
+
+```
+
+### Step 6: Add command in capifony if needed
+
+``` ruby
+#config/deploy.rb
+namespace :bower do
+    task :install do
+        desc "bower Install"
+        run "cd #{latest_release} && #{php_bin} #{symfony_console} fdevs:bower-php:install --env=#{symfony_env_prod}"
+    end
+end
+
+after 'deploy:update', 'bower:install'
 
 ```
