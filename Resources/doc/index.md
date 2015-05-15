@@ -1,21 +1,20 @@
-Getting Started With BowerPhp Bundle
+Getting Started With The BowerPhp Bundle
 ===============================
 
 ## Installation and usage
 
-Installation and usage is a quick:
+Installation and usage are easy:
 
-1. Download bundle using composer
+1. Download the bundle using composer
 2. Enable the bundle
 3. Use the bundle
 4. Configure the bundle
-5. Add your script/style in assetic if needed
-6. Add command in capifony if needed
+5. Add your script/style to assetic if needed
+6. Add a command to capifony if needed
 
+### Step 1: Download the BowerPhp bundle using composer
 
-### Step 1: Download Locale bundle using composer
-
-Add BowerPhp bundle in your composer.json:
+Add the BowerPhp bundle in your composer.json:
 
 ```json
 {
@@ -53,9 +52,11 @@ public function registerBundles()
 
 ### Step 3: Use the bundle
 
-run command `php bin/console fdevs:bower-php:init -p 'package' -a 'username'`
+Run the command `php bin/console fdevs:bower-php:init -p 'package' -a 'username'`.
 
-add your package `php bin/console fdevs:bower-php:install -S jquery`
+Then you can add any package via `php bin/console fdevs:bower-php:install -S jquery`.
+
+You can see the all available CLI commands under `fdevs:bower-php` namespace.
 
 
 ### Step 4: Configure the bundle
@@ -68,7 +69,7 @@ f_devs_bower_php:
     github_token:         null
 ```
 
-### Step 5: Add your script/style in assetic if needed
+### Step 5: Add your script/style to assetic if needed
 
 ``` yaml
 # Assetic Configuration
@@ -79,10 +80,9 @@ assetic:
             inputs:
                 - 'components/jquery/dist/jquery.js'
             output: 'js/jquery.js'
-
 ```
 
-### Step 6: Add command in capifony if needed
+### Step 6: Add a command to capifony if needed
 
 ``` ruby
 #config/deploy.rb
@@ -94,5 +94,4 @@ namespace :bower do
 end
 
 before 'symfony:assetic:dump', 'bower:install'
-
 ```

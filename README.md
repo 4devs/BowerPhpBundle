@@ -1,14 +1,14 @@
-Bower php Bundle
-================
+The BowerPhp Bundle
+===================
 
 Documentation
 -------------
-use [bowerphp](http://bowerphp.org/) for manages all frameworks, libraries, assets, utilities, and rainbows.
+This bundle uses [bowerphp](http://bowerphp.org/) to manage all frameworks, libraries, assets, utilities and rainbows.
 
-Installation
-------------
+Installation and Usage
+----------------------
 
-All the installation instructions are located in [documentation](https://github.com/4devs/BowerPhpBundle/blob/master/Resources/doc/index.md).
+The all installation instructions and usage examples are located in [documentation](https://github.com/4devs/BowerPhpBundle/blob/master/Resources/doc/index.md).
 
 License
 -------
